@@ -1,6 +1,14 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <array>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <iomanip>
+#include <map>
+#include <algorithm>
 
+using namespace std;
 int total; //total de letras
 string text; //todo el archivo en una string
 array<char, 26> abc; //alfabeto sustitutivo
@@ -33,7 +41,6 @@ bool fset(const string& tmp) {
 }
 
 // En las siguientes funciones si una letra fue usada se pinta de rojo
-
 void get_letters() {
     for (auto i : dict_letters) {
         if (used[i.first-'a']) cout<<red;
@@ -77,7 +84,6 @@ void get_alphabet() {
 
 //comprueba si todo el alfabeto esta usado e indica las letras q se repiten
 //si todo es correcto lo mas probable es q se haya descifrado el texto
-
 void test() {
     bool b1=true, b2=true;
 

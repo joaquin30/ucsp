@@ -32,7 +32,7 @@ void binary_division(u32 dividendo, u32 divisor,
         A = AQ >> bitlen;
         Q = (AQ & ((1ul << bitlen) - 1));
         A += ~M + 1; /*resta complemento 2*/
-        if ((A >> 31) & 1) { /*msb para comprobar signo*/
+        if ((A >> 31) & 1) { /*msb para comprobar si es < 0*/
             if (Q & 1) Q--;
             A += M;
         } else if (!(Q & 1)) Q++;
